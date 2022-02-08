@@ -6,6 +6,13 @@ public class ProductApp{
 		String temp;
 		while(runner){		
 			Product p1 = ProductDB.getProduct(Validator1.getString("Enter Product Code: "));
+			if(p1 == null){
+				System.out.println("No product matches this product code.");
+				temp = Validator1.getString("Continue? (y/n)");
+				if(!temp.equalsIgnoreCase("y"))
+					runner = false;
+				continue;
+			}
 			System.out.print(p1.toString());
 			if(p1 instanceof Book){
 				System.out.println("Author:      " + ((Book)p1).getAuthor());

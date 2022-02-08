@@ -9,8 +9,6 @@ public class ProductDB
 
         Product p = null;
 
-        System.out.println("In getProduct()");
-
         if (productCode.equalsIgnoreCase("java") ||
            productCode.equalsIgnoreCase("jsps") ||
            productCode.equalsIgnoreCase("mcb2"))
